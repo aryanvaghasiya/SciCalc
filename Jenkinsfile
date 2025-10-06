@@ -2,19 +2,19 @@ pipeline {
     agent any   // Run on any available Jenkins agent
 
     tools {
-        maven 'Maven_3.9.9'   // Must match Global Tool Config name in Jenkins
+        maven 'Maven_3.6.3'   // Must match Global Tool Config name in Jenkins
         jdk 'JDK17'
     }
 
     environment {
-        DOCKER_IMAGE = "areen9295/calc-app2"
+        DOCKER_IMAGE = "aryanvaghasiya/SciCalc-app"
     }
 
     stages {
         stage('Checkout') {
             steps {
                 // Pull code from GitHub
-                git branch: 'main', url: 'https://github.com/AV-AKIHIRO/Scientific-Calculator-SPE'
+                git branch: 'main', url: 'https://github.com/aryanvaghasiya/SciCalc'
             }
         }
 
@@ -66,7 +66,7 @@ pipeline {
         success {
             echo "Build #${env.BUILD_NUMBER} completed successfully!"
             emailext(
-                to: 'areen.vaghasiya+jenkins@iiitb.ac.in',
+                to: 'aryan.vaghasiya@iiitb.ac.in',
                 subject: "Jenkins Build SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 body: """
                 Hi Team,
@@ -75,14 +75,14 @@ pipeline {
                 Docker Image pushed: ${DOCKER_IMAGE}:${env.BUILD_NUMBER}
 
                 Regards,
-                Jenkins CI/CD(Areen Vaghasiya)
+                Jenkins CI/CD(Aryan Vaghasiya)
                 """
             )
         }
         failure {
             echo "Build #${env.BUILD_NUMBER} failed!"
             emailext(
-                to: 'areen.vaghasiya+jenkins@iiitb.ac.in',
+                to: 'aryan.vaghasiya@iiitb.ac.in',
                 subject: "Jenkins Build FAILURE: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 body: """
                 Hi Team,
@@ -91,7 +91,7 @@ pipeline {
                 Please check Jenkins logs for details.
 
                 Regards,
-                Jenkins CI/CD(Areen Vaghasiya)
+                Jenkins CI/CD(Aryan Vaghasiya)
                 """
             )
         }
