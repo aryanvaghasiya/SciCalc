@@ -7,7 +7,7 @@ pipeline {
     }
 
     environment {
-        DOCKER_IMAGE = "aryanvaghasiya/SciCalc-app"
+        DOCKER_IMAGE = "aryanvaghasiya/scicalc-app"
     }
 
     stages {
