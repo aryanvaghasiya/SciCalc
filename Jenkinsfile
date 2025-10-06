@@ -8,16 +8,16 @@ pipeline {
 
     environment {
         DOCKER_IMAGE = "aryanvaghasiya/scicalc-app"
-        # Define the location of the Ansible inventory file (e.g., hosts.ini)
+        // Define the location of the Ansible inventory file (e.g., hosts.ini)
         ANSIBLE_INVENTORY = "hosts.ini" 
-        # Define the playbook file (assuming it's in the root of the repo)
+        // Define the playbook file (assuming it's in the root of the repo)
         ANSIBLE_PLAYBOOK = "deploy.yml"
     }
 
     stages {
         stage('Checkout') {
             steps {
-                // Pull code from GitHub (ensure this repo contains hosts.ini and deploy.yml)
+                // Pull code from GitHub
                 git branch: 'main', url: 'https://github.com/aryanvaghasiya/SciCalc'
             }
         }
@@ -65,15 +65,15 @@ pipeline {
             }
         }
         
-        # **********************************************
-        # ********** NEW ANSIBLE DEPLOY STAGE **********
-        # **********************************************
+        // **********************************************
+        // ********** NEW ANSIBLE DEPLOY STAGE **********
+        // **********************************************
         stage('Ansible Deploy') {
             steps {
                 echo "Starting Ansible deployment for image ${DOCKER_IMAGE}:${env.BUILD_NUMBER}"
                 
-                # Execute the playbook, passing the newly created Docker tag as an extra variable.
-                # NOTE: The Jenkins agent must have Ansible and the Python Docker SDK installed.
+                // Execute the playbook, passing the newly created Docker tag as an extra variable.
+                // NOTE: The Jenkins agent must have Ansible installed.
                 sh "ansible-playbook -i ${ANSIBLE_INVENTORY} ${ANSIBLE_PLAYBOOK} -e \"docker_image_tag=${DOCKER_IMAGE}:${env.BUILD_NUMBER}\""
             }
         }
@@ -115,8 +115,6 @@ pipeline {
         }
     }
 }
-
-
 
 
 //-------------------------------------------before change-------------------------------------------------
