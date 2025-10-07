@@ -16,7 +16,7 @@
 ---
 - name: Deploy SciCalc Docker container
   hosts: local 
-  become: yes
+  become: no
   tasks:
     # 1. Ensure the Python 'docker' package is installed
     - name: Ensure Python 'docker' package is installed
