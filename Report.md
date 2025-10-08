@@ -1,7 +1,7 @@
 # Mini Project Report
 
-**Student Name:** Areen Vaghasiya
-**Roll Number:** IMT2022048
+**Student Name:** Aryan Vaghasiya
+**Roll Number:** IMT2022046
 **Project Title:** Scientific Calculator with DevOps Pipeline
 
 ---
