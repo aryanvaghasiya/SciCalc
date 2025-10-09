@@ -87,7 +87,7 @@ pipeline {
         success {
             echo "Build #${env.BUILD_NUMBER} completed successfully!"
             emailext(
-                to: 'aryan.vaghasiya@iiitb.ac.in',
+                to: 'aryanvaghasia12345@gmail.com',
                 subject: "Jenkins Build SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 body: """
                 Hi Team,
@@ -104,7 +104,7 @@ pipeline {
         failure {
             echo "Build #${env.BUILD_NUMBER} failed!"
             emailext(
-                to: 'aryan.vaghasiya@iiitb.ac.in',
+                to: 'aryanvaghasia12345@gmail.com',
                 subject: "Jenkins Build FAILURE: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 body: """
                 Hi Team,
