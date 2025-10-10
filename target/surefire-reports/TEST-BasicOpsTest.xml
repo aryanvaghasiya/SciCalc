@@ -10,9 +10,9 @@
     <property name="os.name" value="Linux"/>
     <property name="java.vm.specification.version" value="17"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="user.country" value="IN"/>
+    <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/aryan/Downloads/SciCalc/target/surefire/surefirebooter13411397781066958354.jar /home/aryan/Downloads/SciCalc/target/surefire 2025-10-09T11-49-55_222-jvmRun1 surefire14345494083095184233tmp surefire_05446789210952400732tmp"/>
+    <property name="sun.java.command" value="/home/aryan/Downloads/SciCalc/target/surefire/surefirebooter528192305587980253.jar /home/aryan/Downloads/SciCalc/target/surefire 2025-10-10T12-09-14_294-jvmRun1 surefire6483371517321804551tmp surefire_016605437936176495440tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/aryan/Downloads/SciCalc/target/test-classes:/home/aryan/Downloads/SciCalc/target/classes:/home/aryan/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.1/junit-jupiter-api-5.8.1.jar:/home/aryan/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/aryan/.m2/repository/org/junit/platform/junit-platform-commons/1.8.1/junit-platform-commons-1.8.1.jar:/home/aryan/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/aryan/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.1/junit-jupiter-engine-5.8.1.jar:/home/aryan/.m2/repository/org/junit/platform/junit-platform-engine/1.8.1/junit-platform-engine-1.8.1.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -27,7 +27,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/home/aryan/Downloads/SciCalc/target/surefire/surefirebooter13411397781066958354.jar"/>
+    <property name="surefire.real.class.path" value="/home/aryan/Downloads/SciCalc/target/surefire/surefirebooter528192305587980253.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.14+7-Ubuntu-122.04.1"/>
     <property name="user.name" value="aryan"/>
